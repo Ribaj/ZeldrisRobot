@@ -208,7 +208,7 @@ if SPAMWATCH is None:
 else:
     spamwtc = spamwatch.Client(SPAMWATCH)
 
-REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=false)
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=true)
 try:
     REDIS.ping()
     LOGGER.info("[Zeldris] Your redis server is now alive!")
